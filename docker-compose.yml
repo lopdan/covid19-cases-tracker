@@ -3,12 +3,7 @@ version: '3.8'
 services:
     app:
         image: node:12-alpine
-        build:
-            context: .
-            dockerfile: Dockerfile
-        volumes: 
-            - '.:/app'
-            - '/app/node_modules'
+        volumes:
             - ./:/app:cached
         working_dir: /app
         ports:
