@@ -1,9 +1,16 @@
 import React from 'react';
 import { useEffect, useState} from 'react';
+import { fetchAllData, fetchData } from '../../api';
+import { Line, Bar } from 'react-chartjs-2';
 
-const Chart = () => {
+import styles from './Chart.module.css';
+
+const Chart = (data) => {
+
     return(
-        <h1>Chartss</h1>
+        <div className={styles.container}>
+           
+        </div>
     )
 }
 

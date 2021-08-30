@@ -2,12 +2,13 @@ import React from 'react';
 import cx from 'classnames';
 
 import { Card, CardContent, Grid, Typography } from '@material-ui/core';
-
+import CountUp from 'react-countup';
 import styles from './Cards.module.css'
+
 
 const Cards = (data) => {
     if(!data.data){
-        return 'Loading...';
+        return 'Loading data...';
     }
 
     return(
@@ -19,7 +20,12 @@ const Cards = (data) => {
                             Infected
                         </Typography>
                         <Typography variant="h5">
-                            {data.data.confirmed}
+                            <CountUp
+                                start={0}
+                                end={data.data.confirmed}
+                                duration={1.8}
+                                separator="."
+                            />
                         </Typography>
                         <Typography colort="textSecondary" gutterBottom>
                             {data.data.lastUpdate}
@@ -35,7 +41,12 @@ const Cards = (data) => {
                             Deaths
                         </Typography>
                         <Typography variant="h5">
-                            {data.data.deaths}
+                            <CountUp
+                                start={0}
+                                end={data.data.deaths}
+                                duration={1.8}
+                                separator="."
+                            />
                         </Typography>
                         <Typography colort="textSecondary" gutterBottom>
                             {data.data.lastUpdate}
@@ -51,7 +62,12 @@ const Cards = (data) => {
                             Daily cases
                         </Typography>
                         <Typography variant="h5">
-                            {data.data.newCases}
+                            <CountUp
+                                start={0}
+                                end={data.data.newCases}
+                                duration={1.8}
+                                separator="."
+                            />
                         </Typography>
                         <Typography colort="textSecondary" gutterBottom>
                             {data.data.lastUpdate}
@@ -67,7 +83,12 @@ const Cards = (data) => {
                             Daily deaths
                         </Typography>
                         <Typography variant="h5">
-                            {data.data.newDeaths}
+                            <CountUp
+                                start={0}
+                                end={data.data.newDeaths}
+                                duration={1.8}
+                                separator="."
+                            />
                         </Typography>
                         <Typography colort="textSecondary" gutterBottom>
                             {data.data.lastUpdate}
