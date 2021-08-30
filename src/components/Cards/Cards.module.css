@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.cases {
+  border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+}
+
+.daily_cases{
+  border-bottom: 10px solid rgba(52, 83, 224, 0.5);
+}
+
+.deaths{
+  border-bottom: 10px solid rgba(32, 8, 8, 0.5);
+}
+.daily_deaths{
+  border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+}
