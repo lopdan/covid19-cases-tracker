@@ -6,6 +6,10 @@ import { Card, CardContent, Grid, Typography } from '@material-ui/core';
 import styles from './Cards.module.css'
 
 const Cards = (data) => {
+    if(!data.data){
+        return 'Loading...';
+    }
+
     return(
         <div className={styles.container}>
             <Grid container spacing={4} justify="center">
