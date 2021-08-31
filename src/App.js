@@ -7,24 +7,24 @@ import { useState, useEffect } from 'react';
 
 
 const App = () => {
-	const [data, updateData] = useState();
+	const [data, updateData] = useState({
+		data: null,
+		country: null,
+	});
 
 
 	useEffect(async () => {
-		const data = await fetchData();	
-		updateData(data);
-		console.log(data);
-	},[]);
-
+		// Render component
+	},[data.country]);
 	const handleCountryChange = async (country) => {
-		const data = await fetchCountries(country);
-	
-		updateData({ data, country: country });
+		const fetchedData = await fetchData(country);
+		
+		updateData({...data, data: fetchedData, country: country });
 	}
 
 	return(
 		<div className={styles.container}>
-			<Cards data={data} />
+			<Cards data={data.data} />
 			<CountryPicker handleCountryChange={handleCountryChange} />
 		</div>
 	);

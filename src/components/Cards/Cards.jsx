@@ -10,11 +10,10 @@ const Cards = (data) => {
     if(!data.data){
         return 'Loading data...';
     }
-
     return(
         <div className={styles.container}>
-            <Grid container spacing={4} justify="center">
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.cases)}>
+            <Grid container spacing={2} justify="center">
+                <Grid item component={Card} xs={6} md={3} className={cx(styles.card, styles.cases)}>
                     <CardContent>
                         <Typography colort="textSecondary" gutterBottom>
                             Infected
@@ -35,7 +34,7 @@ const Cards = (data) => {
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
+                <Grid item component={Card} xs={6} md={3} className={cx(styles.card, styles.deaths)}>
                     <CardContent>
                         <Typography colort="textSecondary" gutterBottom>
                             Deaths
@@ -56,7 +55,7 @@ const Cards = (data) => {
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.daily_cases)}>
+                <Grid item component={Card} xs={6} md={3} className={cx(styles.card, styles.daily_cases)}>
                     <CardContent>
                         <Typography colort="textSecondary" gutterBottom>
                             Daily cases
@@ -77,7 +76,7 @@ const Cards = (data) => {
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.daily_deaths)}>
+                <Grid item component={Card} xs={6} md={3} className={cx(styles.card, styles.daily_deaths)}>
                     <CardContent>
                         <Typography colort="textSecondary" gutterBottom>
                             Daily deaths
