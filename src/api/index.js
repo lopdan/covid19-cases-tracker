@@ -17,17 +17,14 @@ export const fetchData = async (country) => {
         olddate = olddate.toISOString().split('T')[0];
 
         let data;
-        if(country)
-        {
+        if(country){
             countryUrl = `${url}country/${country}?date_from=${olddate}&date_to=${date}`;
             data = await axios.get(countryUrl);
         }
-        else
-        {
+        else{
             data = await axios.get(url + date);
         }
-        const modifiedData = 
-        {
+        const modifiedData = {
             confirmed: data.data.dates[date].countries[country].today_confirmed,
             deaths: data.data.dates[date].countries[country].today_deaths,
             newCases: data.data.dates[date].countries[country].today_new_confirmed,
@@ -35,17 +32,32 @@ export const fetchData = async (country) => {
             lastUpdate: data.data.updated_at
         }
         return modifiedData;
-
-    }
-    catch(err)
-    {
+    }catch(err){
         return err;
     }
 }
 
-export const fetchAllData = async() => {
-    let date = (new Date()).toISOString().split('T')[0];
-    const { data  } = await axios.get(url + date);
+export const fetchAllData = async(country) => {
+    try
+    {
+        // Todays date
+        let date = (new Date()).toISOString().split('T')[0];
+        let countryUrl;
+
+        // Date from 1 month ago
+        let olddate = new Date();
+        olddate.setMonth(olddate.getMonth() - 1);
+        olddate = olddate.toISOString().split('T')[0];
+
+        let data;
+        if(country){
+            countryUrl = `${url}country/${country}?date_from=${olddate}&date_to=${date}`;
+            data = await axios.get(countryUrl);
+        }
+        return data;
+    }catch(err){
+        return err;
+    }
 }
 
 export const fetchCountries = async () => {

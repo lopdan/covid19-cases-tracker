@@ -26,6 +26,7 @@ const App = () => {
 		<div className={styles.container}>
 			<Cards data={data.data} />
 			<CountryPicker handleCountryChange={handleCountryChange} />
+			<Chart country={data.country} /> 
 		</div>
 	);
 }
