@@ -15,10 +15,9 @@ const App = () => {
 
 	useEffect(async () => {
 		// Render component
-	},[data.country]);
+	},[data]);
 	const handleCountryChange = async (country) => {
 		const fetchedData = await fetchData(country);
-		
 		updateData({...data, data: fetchedData, country: country });
 	}
 
