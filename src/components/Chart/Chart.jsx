@@ -64,7 +64,7 @@ const Chart = ({country}) => {
 		return arrayData;
 	}
 	const lineChart = (
-		charData ? (
+		charData.dates ? (
 		  <Line
 			data={{
 			  labels: Object.values(charData.dates).map((dates) => dates),
