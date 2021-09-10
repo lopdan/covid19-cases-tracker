@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Covid-19 Cases Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](public/AppImage.png)
+
+In this project you can check COVID-19 data, including: total cases, total deaths, daily cases and daily deaths. You can do it choosing the country which data you want to see, and after that it will show it with the general data and the last month increase in a chart right below.
+
+## Data
+
+The data fetched is from [Proyecto COVID-19 Narrativa](https://covid19tracking.narrativa.com/), making API calls depending the country is choosed, like the following example: https://api.covid19tracking.narrativa.com/api/country/Spain?date_from=2021-09-07&date_to=2021-09-08.
+
+## Technologies
+
+This application was made with [React](https://reactjs.org/) and [Docker](https://www.docker.com/).
 
 ## Available Scripts
 
