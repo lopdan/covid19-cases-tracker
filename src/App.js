@@ -23,6 +23,7 @@ const App = () => {
 
 	return(
 		<div className={styles.container}>
+			<img className={styles.image} src="./headerImage.png" alt="COVID"/>
 			<Cards data={data.data} />
 			<CountryPicker handleCountryChange={handleCountryChange} />
 			<Chart country={data.country} /> 

@@ -8,10 +8,10 @@ body {
     flex-direction: column;
 }
 .image {
-    width: 370px;
-    margin-top: 50px;
+    width: 250px;
+    margin-top: 30px;
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1120px) {
     .container 
     {
         margin: 0 10%;

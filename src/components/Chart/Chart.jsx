@@ -81,7 +81,10 @@ const Chart = ({country}) => {
 				fill: true,
 			  }
 			  ],
-			}}
+			}} options={{
+				responsive: true,
+				maintainAspectRatio: false,
+			  }}
 		  />
 		) : null
 	);
